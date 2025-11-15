@@ -180,6 +180,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${img_width_height().x}" height="${img_width_height().y}">${HTMLFunc(this.el.innerText)}</svg>`;
                 console.log(data);
                 if (!option){
+                requestAnimationFrame(()=>{ ctx.drawImage(this.imgEl,0,0)});
                     return;
                 }
                 var DOMURL = self.URL || self.webkitURL || self;
@@ -204,7 +205,7 @@
                         thisobj.imgEl.src = param;
                     }
                 });
-                requestAnimationFrame(()=>{ ctx.drawImage(this.imgEl,0,0)});;
+                requestAnimationFrame(()=>{ ctx.drawImage(this.imgEl,0,0)});
                 return this.imgEl.src;
             },
             captureArea: function (canvasid, callbackfunc) {
