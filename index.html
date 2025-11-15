@@ -277,7 +277,9 @@
         var data = [];
         var recorder = null;
         var handle;
-        async function wait(milliseconds){}
+        async function wait(delayInMS) {
+            return new Promise((resolve) => setTimeout(resolve, delayInMS));
+        }
         async function convert({dur,fps}={dur:6,fps:25}){
             var duration=dur*1000,frames=fps*dur;
             gif.on('finished',(blob)=>{
@@ -286,7 +288,7 @@
             });
             for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
-                    this.captureArea(canvasid, function (canvparam) {
+                    this.captureArea('mycanvas', function (canvparam) {
                         gif.addFrame(canvparam);
                     });
                 });
