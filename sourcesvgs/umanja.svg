@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360">
+    <g fill="none" stroke-linejoin="round" class="character_group">
+        <!-- <path stroke="#AAA" stroke-linecap="round" stroke-opacity="1.0" stroke-width="0" d=" M188 74 M188 74 L188 74 188 74L188 74 92 145L92 145 238 241L238 241 147 311  M302 166 M302 166 L302 166 302 166L302 166 228 118L228 118 97 257L97 257 40 197"></path> -->
+        
+        <path stroke="#000000ff" stroke-dasharray="410" stroke-dashoffset="410" stroke-linecap="square" stroke-opacity="0.8" stroke-width="22" d=" M188 74 M188 74 L188 74 188 74L188 74 92 145L92 145 238 241L238 241 147 311">
+            <animate attributeName="stroke-dashoffset" begin="0.2s" calcMode="linear" dur="8s" keyTimes="0;0.5;1" repeatCount="indefinite" values="410;0;0"></animate>
+        </path>
+        <path stroke="#000000ff" stroke-dasharray="364" stroke-dashoffset="364" stroke-linecap="square" stroke-opacity="0.8" stroke-width="22" d=" M302 166 M302 166 L302 166 302 166L302 166 228 118L228 118 97 257L97 257 40 197">
+            <animate attributeName="stroke-dashoffset" begin="0.2s" calcMode="linear" dur="8s" keyTimes="0;0.5;1" repeatCount="indefinite" values="364;364;0"></animate>
+        </path>
+    </g>
+</svg>
