@@ -180,7 +180,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${img_width_height().x}" height="${img_width_height().y}">${HTMLFunc(this.el.innerText)}</svg>`;
                 console.log(data);
                 if (!option){
-                    requestAnimationFrame(()=>{ ctx.drawImage(this.imgEl,0,0)});
+                ctx.drawImage(this.imgEl,0,0);
                     return;
                 }
                 var DOMURL = self.URL || self.webkitURL || self;
@@ -205,7 +205,7 @@
                         thisobj.imgEl.src = param;
                     }
                 });
-                requestAnimationFrame(()=>{ ctx.drawImage(this.imgEl,0,0)});
+                ctx.drawImage(this.imgEl,0,0);
                 return this.imgEl.src;
             },
             captureArea: function (canvasid, callbackfunc) {
@@ -298,11 +298,14 @@
             capturing.SVGonCanvas('mycanvas',true);
             for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
-                    capturing.captureArea('mycanvas', function (canvparam) {
+                    requestAnimationFrame(()=>{
+                        capturing.captureArea('mycanvas', function (canvparam) {
                         gif.addFrame(canvparam.getContext("2d",{
-            willReadFrequently:true,
-        }));
+                            willReadFrequently:true,
+                        }));
                     });
+                    });
+                    
                 });
             }
             await wait(1000).then(()=>{
