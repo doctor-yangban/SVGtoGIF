@@ -2,13 +2,6 @@
     <defs></defs>
 
     <g fill="none" stroke-linejoin="round" class="character_group">
-        <!-- <path stroke="#AAA" stroke-linecap="round" stroke-opacity="1.0" stroke-width="21.6"
-            d=" M41 69 M41 69 L41 69 41 69L41 69 119 65L119 65 41 120  M73 95 M73 95 L73 95 73 95L73 95 109 113
-        M70 134 M70 134 L70 134 70 134L70 134 62 154  M16 153 M16 153 L16 153 16 153L16 153 118 157
-        M31 182 M31 182 L31 182 31 182L31 182 85 180L85 180 30 214  M58 197 M58 197 L58 197 58 197L58
-        197 94 204  M168 97 M168 97 L168 97 168 97L168 97 207 97L207 97 165 190  M207 97 M207 97 L207
-        97 207 97L207 97 241 93L241 93 195 185  M264 77 M264 77 L264 77 264 77L264 77 255 191  M258
-        140 M258 140 L258 140 258 140L258 140 285 137"></path> -->
 
         <path stroke="#ff0000" stroke-dasharray="175" stroke-dashoffset="175"
             stroke-linecap="square" stroke-opacity="0.8" stroke-width="14.4"
