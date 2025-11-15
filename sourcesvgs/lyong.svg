@@ -3,52 +3,52 @@
         <!-- <path stroke="#AAA" stroke-linecap="round" stroke-opacity="1.0" stroke-width="8" d=" M57 44 M57 44 L57 44 57 44L57 44 56 77  M16 86 M16 86 L16 86 16 86L16 86 102 76  M38 108 M38 108 L38 108 38 108L38 108 47 150  M90 109 M90 109 L90 109 90 109L90 109 90 140  M24 155 M24 155 L24 155 24 155L24 155 118 145  M32 186 M32 186 L32 186 32 186L32 186 34 263  M32 186 M32 186 L32 186 32 186L32 186 110 177L110 177 94 288L94 288 59 297  M46 215 M46 215 L46 215 46 215L46 215 91 210  M36 234 M36 234 L36 234 36 234L36 234 86 236  M167 72 M167 72 L167 72 167 72L167 72 209 72  M161 49 M161 49 L161 49 161 49L161 49 154 94L154 94 207 99L207 99 202 130  M146 142 M146 142 L146 142 146 142L146 142 202 130  M146 142 M146 142 L146 142 146 142L146 142 149 231L149 231 169 264L169 264 209 228  M154 170 M154 170 L154 170 154 170L154 170 188 162  M150 197 M150 197 L150 197 150 197L150 197 200 186  M149 231 M149 231 L149 231 149 231L149 231 184 216"></path> -->
         
         <path stroke="#000" stroke-dasharray="34" stroke-dashoffset="34" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M57 44 M57 44 L57 44 57 44L57 44 56 77">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.0625;1" repeatCount="indefinite" values="34;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.0625;1" repeatCount="indefinite" values="34;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="87" stroke-dashoffset="87" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M16 86 M16 86 L16 86 16 86L16 86 102 76">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.0625;0.125;1" repeatCount="indefinite" values="87;87;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.0625;0.125;1" repeatCount="indefinite" values="87;87;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="43" stroke-dashoffset="43" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M38 108 M38 108 L38 108 38 108L38 108 47 150">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.125;0.1875;1" repeatCount="indefinite" values="43;43;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.125;0.1875;1" repeatCount="indefinite" values="43;43;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="31" stroke-dashoffset="31" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M90 109 M90 109 L90 109 90 109L90 109 90 140">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.1875;0.25;1" repeatCount="indefinite" values="31;31;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.1875;0.25;1" repeatCount="indefinite" values="31;31;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="95" stroke-dashoffset="95" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M24 155 M24 155 L24 155 24 155L24 155 118 145">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.25;0.3125;1" repeatCount="indefinite" values="95;95;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.25;0.3125;1" repeatCount="indefinite" values="95;95;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="78" stroke-dashoffset="78" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M32 186 M32 186 L32 186 32 186L32 186 34 263">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.3125;0.375;1" repeatCount="indefinite" values="78;78;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.3125;0.375;1" repeatCount="indefinite" values="78;78;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="229" stroke-dashoffset="229" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M32 186 M32 186 L32 186 32 186L32 186 110 177L110 177 94 288L94 288 59 297">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.375;0.4375;1" repeatCount="indefinite" values="229;229;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.375;0.4375;1" repeatCount="indefinite" values="229;229;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="46" stroke-dashoffset="46" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M46 215 M46 215 L46 215 46 215L46 215 91 210">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.4375;0.5;1" repeatCount="indefinite" values="46;46;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.4375;0.5;1" repeatCount="indefinite" values="46;46;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="51" stroke-dashoffset="51" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M36 234 M36 234 L36 234 36 234L36 234 86 236">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.5;0.5625;1" repeatCount="indefinite" values="51;51;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.5;0.5625;1" repeatCount="indefinite" values="51;51;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="42" stroke-dashoffset="42" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M167 72 M167 72 L167 72 167 72L167 72 209 72">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.5625;0.625;1" repeatCount="indefinite" values="42;42;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.5625;0.625;1" repeatCount="indefinite" values="42;42;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="132" stroke-dashoffset="132" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M161 49 M161 49 L161 49 161 49L161 49 154 94L154 94 207 99L207 99 202 130">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.625;0.6875;1" repeatCount="indefinite" values="132;132;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.625;0.6875;1" repeatCount="indefinite" values="132;132;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="58" stroke-dashoffset="58" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M146 142 M146 142 L146 142 146 142L146 142 202 130">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.6875;0.75;1" repeatCount="indefinite" values="58;58;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.6875;0.75;1" repeatCount="indefinite" values="58;58;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="183" stroke-dashoffset="183" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M146 142 M146 142 L146 142 146 142L146 142 149 231L149 231 169 264L169 264 209 228">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.75;0.8125;1" repeatCount="indefinite" values="183;183;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.75;0.8125;1" repeatCount="indefinite" values="183;183;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="35" stroke-dashoffset="35" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M154 170 M154 170 L154 170 154 170L154 170 188 162">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.8125;0.875;1" repeatCount="indefinite" values="35;35;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.8125;0.875;1" repeatCount="indefinite" values="35;35;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="52" stroke-dashoffset="52" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M150 197 M150 197 L150 197 150 197L150 197 200 186">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.875;0.9375;1" repeatCount="indefinite" values="52;52;0;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.875;0.9375;1" repeatCount="indefinite" values="52;52;0;0"></animate>
         </path>
         <path stroke="#000" stroke-dasharray="39" stroke-dashoffset="39" stroke-linecap="square" stroke-opacity="0.8" stroke-width="10" d=" M149 231 M149 231 L149 231 149 231L149 231 184 216">
-            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="12s" keyTimes="0;0.9375;1" repeatCount="indefinite" values="39;39;0"></animate>
+            <animate attributeName="stroke-dashoffset" begin="0s" calcMode="linear" dur="2s" keyTimes="0;0.9375;1" repeatCount="indefinite" values="39;39;0"></animate>
         </path>
     </g>
 </svg>
