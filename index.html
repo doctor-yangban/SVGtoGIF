@@ -296,22 +296,38 @@
                 window.open(blobUrl);
             });
             capturing.SVGonCanvas('mycanvas',true);
-            for (var i = 0;i<frames;i++){
+            /* for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
                     requestAnimationFrame(()=>{
                         capturing.captureArea('mycanvas', function (canvparam) {
-                        gif.addFrame(canvparam.getContext("2d",{
-                            willReadFrequently:true,
-                        }));
-                    });
+                            gif.addFrame(canvparam.getContext("2d",{
+                                willReadFrequently:true,
+                            }));
+                        });
                     });
                     
                 });
+            } */
+            function animationFunc(timestamp){
+                if (timestamp > frames){
+                    console.log('render');
+                    gif.render();
+                    return;
+                }
+                capturing.captureArea('mycanvas', function (canvparam) {
+                    gif.addFrame(canvparam.getContext("2d",{
+                        willReadFrequently:true,
+                    }));
+                });
+                setTimeout(()=>{
+                    requestAnimationFrame(animationFunc);
+                },1000 / fps);
             }
-            await wait(1000).then(()=>{
+            requestAnimationFrame(animationFunc);
+            /* await wait(1000).then(()=>{
                 console.log('render');
                 gif.render();
-            });
+            }); */
         }
         function start_recording() {
             var stream = mycanvas.captureStream();
