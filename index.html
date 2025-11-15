@@ -319,7 +319,7 @@
                 capturing.captureArea('mycanvas', function (canvparam) {
                     var nimg= new Image(canvparam.width);
                     nimg.src=canvparam.toDataURL('image/png');
-                    gif.addFrame(nimg);
+                    gif.addFrame(nimg,{delay:1000 / fps});
                 });
                 pushedFrames++;
                 setTimeout(()=>{
