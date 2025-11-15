@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" class="mysvg">
-
+    <defs></defs>
 
     <g fill="none" stroke-linejoin="round" class="character_group">
         <!-- <path stroke="#AAA" stroke-linecap="round" stroke-opacity="1.0" stroke-width="21.6"

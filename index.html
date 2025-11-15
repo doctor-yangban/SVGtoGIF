@@ -294,8 +294,9 @@
                 });
             }
             await wait(1000).then(()=>{
+                console.log('render');
                 gif.render();
-            })
+            });
         }
         function start_recording() {
             var stream = mycanvas.captureStream();
