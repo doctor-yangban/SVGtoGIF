@@ -311,7 +311,7 @@
             var pushedFrames=0;
             var animationId;
             function updateFunc(timestamp){
-                if (pushedFrames > duration){
+                if (pushedFrames > frames){
                     cancelAnimationFrame(animationId);
                     console.log('render');
                     gif.render();
