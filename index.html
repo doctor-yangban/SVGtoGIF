@@ -204,6 +204,7 @@
                         thisobj.imgEl.src = param;
                     }
                 });
+                ctx.drawImage(this.imgEl,0,0);
                 return this.imgEl.src;
             },
             captureArea: function (canvasid, callbackfunc) {
