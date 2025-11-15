@@ -323,7 +323,7 @@
                     requestAnimationFrame(animationFunc);
                 },1000 / fps);
             }
-            animationFunc(0);
+            requestAnimationFrame(animationFunc)
             /* await wait(1000).then(()=>{
                 console.log('render');
                 gif.render();
