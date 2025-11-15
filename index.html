@@ -78,9 +78,9 @@
                 placeholder="full length in frames">
         </div>
         <div contenteditable="true"
-            style="min-width: 100px; border: 1px solid #050505;min-height: 800px;max-width: 60%;" id="customSVG">
+            style="min-width: 100px; border: 1px solid #050505;min-height: 10px;max-width: 60%;" id="customSVG">
         </div>
-        <ul>
+        <ul style="display: none;">
             <li>
                 <h2>plz read texts below</h2>
             </li>
@@ -171,8 +171,8 @@
                 var c0 = document.getElementById("mycanvas");
                 var c = document.getElementById(canvasid);
                 var ctx = c.getContext("2d",{
-            willReadFrequently:true,
-        });
+                    willReadFrequently:true,
+                });
 
                 var data = (this.mode === 'html') ? `<?xml version="1.0" standalone="no"?> 
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -180,7 +180,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${img_width_height().x}" height="${img_width_height().y}">${HTMLFunc(this.el.innerText)}</svg>`;
                 console.log(data);
                 if (!option){
-                ctx.drawImage(this.imgEl,0,0);
+                    ctx.drawImage(this.imgEl, 0, 0);
                     return;
                 }
                 var DOMURL = self.URL || self.webkitURL || self;
@@ -295,7 +295,6 @@
                 var blobUrl = URL.createObjectURL(blob);
                 window.open(blobUrl);
             });
-            capturing.SVGonCanvas('mycanvas',true);
             /* for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
                     requestAnimationFrame(()=>{
@@ -683,6 +682,10 @@
                 customSVG.classList.remove("with_placeholder");
             }
         });
+        function pushFrame(){
+    mycanvas2.drawImage(myimg,0,0);
+    gif.addFrame(mycanvas2);
+}
     </script>
 </body>
 
