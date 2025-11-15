@@ -309,8 +309,10 @@
                 });
             } */
             var pushedFrames=0;
+            var animationId;
             function updateFunc(timestamp){
                 if (pushedFrames > duration){
+                    cancelAnimationFrame(animationId);
                     console.log('render');
                     gif.render();
                     return;
@@ -326,7 +328,7 @@
                 },1000 / fps);
             }
             function nextAnimationFunc(){
-                requestAnimationFrame(updateFunc);
+                animationId = requestAnimationFrame(updateFunc);
             }
             requestAnimationFrame(animationFunc)
             /* await wait(1000).then(()=>{
