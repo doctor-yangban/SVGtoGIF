@@ -161,7 +161,7 @@
             imgEl: null,
             mode: 'html',
             svginner: '',
-            SVGonCanvas: function (canvasid) {
+            SVGonCanvas: function (canvasid,option) {
 
                 var el = (this.el instanceof HTMLElement) ? this.el : (typeof this.el === 'string') ? document.getElementById(this.el) : null;
                 if (!(el instanceof HTMLElement)) {
@@ -179,7 +179,9 @@
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${img_width_height().x}" height="${img_width_height().y}"> <foreignObject width="${img_width_height().x}" height="${img_width_height().y}" x="0" y="0"><div xmlns="http://www.w3.org/1999/xhtml">${HTMLFunc(this.el.innerText)}</div></foreignObject></svg>` : `
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${img_width_height().x}" height="${img_width_height().y}">${HTMLFunc(this.el.innerText)}</svg>`;
                 console.log(data);
-
+                if (!option){
+                    return;
+                }
                 var DOMURL = self.URL || self.webkitURL || self;
                 var img = new Image();
                 var svg = new Blob([data], {
