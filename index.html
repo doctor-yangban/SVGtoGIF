@@ -308,8 +308,9 @@
                     
                 });
             } */
-            function animationFunc(timestamp){
-                if (timestamp > duration){
+            var pushedFrames=0;
+            function updateFunc(timestamp){
+                if (pushedFrames > duration){
                     console.log('render');
                     gif.render();
                     return;
@@ -319,9 +320,13 @@
                         willReadFrequently:true,
                     }));
                 });
+                pushedFrames++;
                 setTimeout(()=>{
-                    requestAnimationFrame(animationFunc);
+                    nextAnimationFunc();
                 },1000 / fps);
+            }
+            function nextAnimationFunc(){
+                requestAnimationFrame(updateFunc);
             }
             requestAnimationFrame(animationFunc)
             /* await wait(1000).then(()=>{
