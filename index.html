@@ -106,6 +106,13 @@
             width:360,
             height:360,
         });
+        var gif2 = new GIF({
+            workers:4,
+            quality:5,
+            background:'#fff',
+            width:360,
+            height:360,
+        });
         var stopframe = 10000;
         var HTML_Text = {
             Text_to_HTML: function (str) {
@@ -200,8 +207,9 @@
                     return false;
                 }
                 this.SVGonCanvas(canvasid);
-                var newStr = this.encoded;
-                callbackfunc(newStr);
+                callbackfunc(this.canvas);
+                /* var newStr = this.encoded;
+                callbackfunc(newStr); */
             },
             downloadBase64Image: function (filename) {
                 if (typeof this.encoded !== 'string' || typeof filename !== 'string') {
@@ -269,24 +277,42 @@
         var data = [];
         var recorder = null;
         var handle;
-        function start_recording() {
-            var stream = mycanvas.captureStream();
-            var tracks = stream.getTracks();
-            var stream2 = new MediaStream(tracks);
-            recorder = new MediaRecorder(stream2, { mimeType: "image/png" });
-            recorder.ondataavailable = function (ev) {
-                if (ev.data && ev.data.size) {
-                    console.log(ev.data);
-                    gif.addFrame(new Blob(ev.data));
-                    data.push(ev.data);
-                }
-            }
+        async function wait(milliseconds){}
+        async function convert({dur,fps}={dur:6,fps:25}){
+            var duration=dur*1000,frames=fps*dur;
             gif.on('finished',(blob)=>{
                 var blobUrl = URL.createObjectURL(blob);
                 window.open(blobUrl);
             });
-            recorder.onstop = function (ev) {
+            for (var i = 0;i<frames;i++){
+                await wait(1000 / fps).then(()=>{
+                    this.captureArea(canvasid, function (canvparam) {
+                        gif.addFrame(canvparam);
+                    });
+                });
+            }
+            await wait(1000).then(()=>{
                 gif.render();
+            })
+        }
+        function start_recording() {
+            var stream = mycanvas.captureStream();
+            var tracks = stream.getTracks();
+            var stream2 = new MediaStream(tracks);
+            recorder = new MediaRecorder(stream2, { mimeType: "video/webm" });
+            recorder.ondataavailable = function (ev) {
+                if (ev.data && ev.data.size) {
+                    console.log(ev.data);
+                    gif2.addFrame(new Blob(ev.data));
+                    data.push(ev.data);
+                }
+            }
+            gif2.on('finished',(blob)=>{
+                var blobUrl = URL.createObjectURL(blob);
+                window.open(blobUrl);
+            });
+            recorder.onstop = function (ev) {
+                gif2.render();
                 /* var url = URL.createObjectURL(new Blob(data, { type: "video/webm" }));
                 console.log(new Blob(data, { type: "video/webm" }));
                 mylink.href = url;
