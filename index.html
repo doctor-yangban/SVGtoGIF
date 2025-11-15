@@ -330,7 +330,7 @@
             function nextAnimationFunc(){
                 animationId = requestAnimationFrame(updateFunc);
             }
-            requestAnimationFrame(animationFunc)
+            nextAnimationFunc();
             /* await wait(1000).then(()=>{
                 console.log('render');
                 gif.render();
