@@ -293,6 +293,7 @@
                 var blobUrl = URL.createObjectURL(blob);
                 window.open(blobUrl);
             });
+            capturing.SVGonCanvas('mycanvas',true);
             for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
                     capturing.captureArea('mycanvas', function (canvparam) {
