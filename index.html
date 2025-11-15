@@ -317,9 +317,9 @@
                     return;
                 }
                 capturing.captureArea('mycanvas', function (canvparam) {
-                    gif.addFrame(canvparam.getContext("2d",{
-                        willReadFrequently:true,
-                    }));
+                    var nimg= new Image(canvparam.width);
+                    nimg.src=canvparam.toDataURL('image/png');
+                    gif.addFrame(nimg);
                 });
                 pushedFrames++;
                 setTimeout(()=>{
