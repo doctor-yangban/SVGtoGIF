@@ -288,7 +288,7 @@
             });
             for (var i = 0;i<frames;i++){
                 await wait(1000 / fps).then(()=>{
-                    this.captureArea('mycanvas', function (canvparam) {
+                    capturing.captureArea('mycanvas', function (canvparam) {
                         gif.addFrame(canvparam);
                     });
                 });
