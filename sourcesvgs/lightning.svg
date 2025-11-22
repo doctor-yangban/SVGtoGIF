@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360">
+    <g fill="none" stroke-linejoin="round" class="character_group">
+        <path stroke="#AAA" stroke-linecap="round" stroke-opacity="1.0" stroke-width="0"
+            d=" M179 77 M179 77 L179 77 179 77L179 77 127 178L127 178 204 178L204 178 137 270"></path>
+
+        <path stroke="#8f0" stroke-dasharray="305" stroke-dashoffset="305"
+            stroke-linecap="square" stroke-opacity="0.8" stroke-width="50"
+            d=" M179 77 M179 77 L179 77 179 77L179 77 127 178L127 178 204 178L204 178 137 270">
+            <animate attributeName="stroke-dashoffset" begin="await2.end"
+                calcMode="linear" dur=".75s"
+                keyTimes="0;1;1" values="305;0;0" id="animation2"></animate>
+            <animate id="await2" begin=".25s;animation2.end" dur=".25s" />
+        </path>
+        <path stroke="#ddddff" stroke-dasharray="305" stroke-dashoffset="305"
+            stroke-linecap="square" stroke-opacity="0.99" stroke-width="30"
+            d=" M179 77 M179 77 L179 77 179 77L179 77 127 178L127 178 204 178L204 178 137 270">
+            <animate attributeName="stroke-dashoffset" begin="await.end"
+                calcMode="linear" dur=".75s"
+                keyTimes="0;1;1" values="305;0;0" id="animation"></animate>
+            <animate id="await" begin=".25s;animation.end" dur=".25s" />
+        </path>
+    </g>
+
+</svg>
