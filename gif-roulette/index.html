@@ -140,7 +140,7 @@
         function init({width,height}){
             maker=new gifRouletteMaker("",{width,height,quality:5,background:null});
             work=document.getElementById("work");
-            work.innerHTML=`<ul class="list-group"><li class="list-group-item"><button class="btn btn-outline-secondary" onclick="this.parentElement.parentElement.innerHTML=listGroupItemHTML(this.parentElement.parentElement.querySelectorAll('li.frame-item').length-1)+this.parentElement.parentElement.innerHTML;">+ (new frame)</button></li></ul>`;
+            work.innerHTML=`<ul class="list-group"><li class="list-group-item"><button class="btn btn-outline-secondary" onclick="this.parentElement.parentElement.innerHTML=listGroupItemHTML(this.parentElement.parentElement.querySelectorAll('li.frame-item').length)+this.parentElement.parentElement.innerHTML;">+ (new frame)</button></li></ul>`;
         }
     </script>
 </body>
