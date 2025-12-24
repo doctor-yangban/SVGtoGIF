@@ -62,9 +62,9 @@
             }
         }
         function gifRouletteFrame({width,height,text,background,fontFamily,duration}){
-            this.svg = `<svg width="${width}" height="${height}">
+            this.svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
                 <rect width="${width}" height="${height}" fill="${background}" />
-                <text>
+                <text x="100" y="100">
                     <tspan style="color:#fff;text-shadow:1px 1px 1px #000,-1px -1px 1px #000,-1px 1px 1px #000,1px -1px 1px #000;${fontFamily}">${text}</tspan>
                 </text>
             </svg>`;
