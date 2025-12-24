@@ -75,7 +75,7 @@
             this.svg = `<svg width="${width}" height="${height}">
                 <rect width="${width}" height="${height}" fill="${background}" />
                 <text>
-                    <tspan style="${fontFamily}">${text}</tspan>
+                    <tspan style="font-family:${fontFamily}">${text}</tspan>
                 </text>
             </svg>`;
             this.duration=duration;
@@ -118,6 +118,7 @@
                 background:groupEl.querySelector('.inp-background').value,
                 fontFamily:groupEl.querySelector('.inp-font-family').value,
                 duration:Number(groupEl.querySelector('.inp-duration').value),
+                text:groupEl.querySelector('.inp-text').value,
             }
         }
             var listGroupItemHTML=(idx)=>`<li class="frame-item list-group-item"><div class="input-group"><input class="inp-width" type="text" onchange="if (isNaN(this.value)) this.value='500';" placeholder="width" />
@@ -125,6 +126,7 @@
                     <input class="inp-background" type="text" placeholder="background colour" />
                         <input class="inp-font-family" type="text" placeholder="font family" />
                             <input class="inp-duration" type="text" onchange="if (isNaN(this.value)) this.value='25';" placeholder="duration" />
+                            <input class="inp-text" type="text" placeholder="text" />
                 <button class="btn btn-primary" onclick="maker.addFrame({width:500,height:500,text:'',background:'#000000',fontFamily:'Gulim 16px',duration:25}); maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));maker.setGIF();">set</button></div></li>`;
         function init({width,height}){
             maker=new gifRouletteMaker("",{width,height,quality:5,background:null});
