@@ -54,7 +54,7 @@
             },
             async getImg(){
                 var canvas = document.createElement("canvas");
-                var svgEl = document.createElement("svg");
+                var svgEl = document.body.appendChild(document.createElement("svg"));
                 svgEl.outerHTML=this.svg;
                 canvas.width=svgEl.width;
                 canvas.height=svgEl.height;
@@ -67,6 +67,7 @@
                     });
                 }).then((blob)=>{
                     var rtImg = new Image(svgEl.width);
+                    svgEl.remove();
                     rtImg.src=URL.createObjectURL(blob);
                     return rtimg;
                 });
