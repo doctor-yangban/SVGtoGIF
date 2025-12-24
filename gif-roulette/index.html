@@ -54,7 +54,7 @@
             },
             async getImg(){
                 var canvas = document.createElement("canvas");
-                var svgEl = new SVGElement();
+                var svgEl = document.createElement("svg");
                 svgEl.outerHTML=this.svg;
                 canvas.width=svgEl.width;
                 canvas.height=svgEl.height;
