@@ -76,7 +76,7 @@
             this.svg = `<svg width="${width}" height="${height}">
                 <rect width="${width}" height="${height}" fill="${background}" />
                 <text>
-                    <tspan style="${fontFamily}">${text}</tspan>
+                    <tspan style="color:#fff;text-shadow:1px 1px 1px #000,-1px -1px 1px #000,-1px 1px 1px #000,1px -1px 1px #000;${fontFamily}">${text}</tspan>
                 </text>
             </svg>`;
             this.duration=duration;
@@ -136,7 +136,7 @@
                     <div class="input-group"><input class="inp-background" type="text" placeholder="background colour" />
                         <div class="input-group"><input class="inp-font-family" type="text" placeholder="font family" />
                             <div class="input-group"><input class="inp-duration" type="text" onchange="if (isNaN(this.value)) this.value='25';" placeholder="duration" />
-                <button class="btn btn-primary" onclick="maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));">set</button></div></li>`;
+                <button class="btn btn-primary" onclick="maker.addFrame({width:500,height:500,text:'',background:'#000000',fontFamily:'Gulim 16px',duration:25}); maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));">set</button></div></li>`;
         function init({width,height}){
             maker=new gifRouletteMaker("",{width,height,quality:5,background:null});
             work=document.getElementById("work");
