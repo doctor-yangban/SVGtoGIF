@@ -57,6 +57,7 @@
                 svgEl.outerHTML=this.svg;
                 var rtImg=new Image(svgEl.getAttribute("width"));
                 rtImg.src=URL.createObjectURL(new Blob([svgEl.outerHTML],{type:'image/svg+xml'}));
+                svgEl.remove();
                 return rtImg;
             }
         }
