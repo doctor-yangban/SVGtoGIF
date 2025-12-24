@@ -53,11 +53,8 @@
                 this.svg=svg;
             },
             getImg(width){
-                var svgEl = document.body.appendChild(document.createElement("svg"));
-                svgEl.outerHTML=this.svg;
                 var rtImg=new Image(width);
-                rtImg.src=URL.createObjectURL(new Blob([svgEl.outerHTML],{type:'image/svg+xml'}));
-                svgEl.remove();
+                rtImg.src=URL.createObjectURL(new Blob([this.svg],{type:'image/svg+xml'}));
                 return rtImg;
             }
         }
