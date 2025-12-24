@@ -52,10 +52,10 @@
             setSvg(svg){
                 this.svg=svg;
             },
-            getImg(){
+            getImg(width){
                 var svgEl = document.body.appendChild(document.createElement("svg"));
                 svgEl.outerHTML=this.svg;
-                var rtImg=new Image(svgEl.getAttribute("width"));
+                var rtImg=new Image(width);
                 rtImg.src=URL.createObjectURL(new Blob([svgEl.outerHTML],{type:'image/svg+xml'}));
                 svgEl.remove();
                 return rtImg;
@@ -97,7 +97,7 @@
             setGIF(){
                 this.gif.frames=[];
                 for (var frame of this.frames){
-                    this.gif.addFrame(new gifFrame(frame.svg).getImg(),{delay:frame.duration});
+                    this.gif.addFrame(new gifFrame(frame.svg).getImg(frame.width),{delay:frame.duration});
                 }
             },
             render(cbfunc){
