@@ -40,11 +40,12 @@
             </div>
         </div>
 
-        
+        <svg id="svg"></svg>
     </div>
     <script>
         var GIF=window['GIF']?window['GIF']:null;
         var maker=null,work=null;
+        var svgEl = document.getElementById("svg");
         function gifFrame(svg){
             this.svg=svg;
         }
@@ -54,12 +55,12 @@
             },
             async getImg(){
                 var canvas = document.createElement("canvas");
-                var svgEl = document.body.appendChild(document.createElement("svg"));
+                //svgEl = document.body.appendChild(document.createElement("svg"));
                 svgEl.outerHTML=this.svg;
-                canvas.width=svgEl.width;
-                canvas.height=svgEl.height;
+                canvas.width=svgEl.getAttribute("width");
+                canvas.height=svgEl.getAttribute("height");
                 var ctx = canvas.getContext("2d");
-                ctx.drawImage(svgEl,0,0);
+                ctx.drawImage(svgEl,{type:'image/svg+xml'}),0,0);
                 return await new Promise((resolve,reject)=>{
                     canvas.toBlob((blob)=>{
                         resolve(blob);
