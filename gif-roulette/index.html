@@ -136,7 +136,7 @@
                     <div class="input-group"><input class="inp-background" type="text" placeholder="background colour" />
                         <div class="input-group"><input class="inp-font-family" type="text" placeholder="font family" />
                             <div class="input-group"><input class="inp-duration" type="text" onchange="if (isNaN(this.value)) this.value='25';" placeholder="duration" />
-                <button class="btn btn-primary" onclick="maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));"></button></div></li>`;
+                <button class="btn btn-primary" onclick="maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));">set</button></div></li>`;
         function init({width,height}){
             maker=new gifRouletteMaker("",{width,height,quality:5,background:null});
             work=document.getElementById("work");
