@@ -60,7 +60,7 @@
                 canvas.width=svgEl.getAttribute("width");
                 canvas.height=svgEl.getAttribute("height");
                 var ctx = canvas.getContext("2d");
-                ctx.drawImage(svgEl,{type:'image/svg+xml'}),0,0);
+                ctx.drawImage(svgEl,0,0);
                 return await new Promise((resolve,reject)=>{
                     canvas.toBlob((blob)=>{
                         resolve(blob);
