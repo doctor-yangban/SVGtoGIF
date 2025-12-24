@@ -52,7 +52,7 @@
             setSvg(svg){
                 this.svg=svg;
             },
-            async getImg(type){
+            async getImg(){
                 var canvas = document.createElement("canvas");
                 var svgEl = new SVGElement();
                 svgEl.outerHTML=this.svg;
@@ -108,7 +108,7 @@
             setGIF(){
                 this.gif.frames=[];
                 for (var frame of this.frames){
-                    this.gif.addFrame(new gifFrame(frame.svg),{delay:frame.duration});
+                    this.gif.addFrame(new gifFrame(frame.svg).getImg(),{delay:frame.duration});
                 }
             },
             render(cbfunc){
@@ -123,7 +123,6 @@
             if (!(groupEl instanceof HTMLElement)){
                 return {};
             }
-            console.log(groupEl);
             return {
                 width:Number(groupEl.querySelector('.inp-width').value),
                 height:Number(groupEl.querySelector('.inp-height').value),
@@ -137,7 +136,7 @@
                     <input class="inp-background" type="text" placeholder="background colour" />
                         <input class="inp-font-family" type="text" placeholder="font family" />
                             <input class="inp-duration" type="text" onchange="if (isNaN(this.value)) this.value='25';" placeholder="duration" />
-                <button class="btn btn-primary" onclick="maker.addFrame({width:500,height:500,text:'',background:'#000000',fontFamily:'Gulim 16px',duration:25}); maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));">set</button></div></li>`;
+                <button class="btn btn-primary" onclick="maker.addFrame({width:500,height:500,text:'',background:'#000000',fontFamily:'Gulim 16px',duration:25}); maker.frames[${idx}].setOptions(getFrameOptionsFromInpGroup(this.parentElement));maker.setGIF();">set</button></div></li>`;
         function init({width,height}){
             maker=new gifRouletteMaker("",{width,height,quality:5,background:null});
             work=document.getElementById("work");
